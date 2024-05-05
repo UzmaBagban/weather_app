@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="background"></div>
+        <h1 class="title">Weather App</h1>
+        <form id="weatherForm" class="form">
+            <label for="location" class="label">Location:</label>
+            <input type="text" id="location" name="location" class="input">
+            <label for="date1" class="label">Start Date:</label>
+            <input type="date" id="date1" name="date1" class="input">
+            <label for="date2" class="label">End Date:</label>
+            <input type="date" id="date2" name="date2" class="input">
+            <button type="submit" class="button">Get Weather</button>
+        </form>
+        <div id="weatherResult" class="weather-result"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
